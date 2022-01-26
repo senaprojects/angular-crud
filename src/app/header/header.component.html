@@ -1,0 +1,53 @@
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Angular</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+       </ul>
+      
+    </div>
+  </div>
+ 
+</nav>
+
+<div> 
+ 
+<a routerLink="list/add/0" ><button type="button" style="margin-top:30px;" class="btn btn-primary" data-bs-toggle="modal"  data-bs-target="#exampleModal">
+  Addusers
+</button></a>
+
+     <input class="form-control me-2"  type="search"  placeholder="Search" style="margin-left:900px;width:450px;" aria-label="Search" #myinput [(ngModel)]="name" (input)="search()">  
+<table class="table" >
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Image</th>
+      <th scope="col">Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+     
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.img}}</td>
+      <td>{{user.location}}</td>
+      <td><button [routerLink]="['list/edit',user.id]">Edit</button>
+      <!-- Button trigger modal -->
+
+</td>
+      <td><button (click)='ondelete(user.id)'>Delete</button>
+      
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+</div>
+
+

@@ -1,0 +1,29 @@
+<div style="text-align:center;margin-top:50px" >
+<h1>{{choose}}</h1>
+</div>
+<div style="text-align:center">
+<form #addform="ngForm" (ngSubmit)="onsubmit(addform)" >
+<div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Id:</label>
+    <input  type="text" [ngModel]='user.id' name='id'class="form-control"   style="width:300px;margin-left:600px;">
+    </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Name:</label>
+    <input type="email" [ngModel]='user.name' name='user'class="form-control" style="width:300px;margin-left:600px;">
+    </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Imageurl:</label>
+    <input type="text" [ngModel]='user.img' name='image' class="form-control" style="width:300px;margin-left:600px;">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Location:</label>
+    <input type="text" [ngModel]='user.location' name='location'class="form-control"  style="width:300px;margin-left:600px;">
+  </div>
+ 
+  <button type="submit"  class="btn btn-primary" style="width:300px;margin-left:150px;">Submit</button>
+</form>
+<div>
+
+
+
+
